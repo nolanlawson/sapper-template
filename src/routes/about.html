@@ -5,3 +5,17 @@
 <h1>About this site</h1>
 
 <p>This is the 'about' page. There's not much here.</p>
+
+<button on:click="onClick()">Click here to open a "modal"</button>
+<script>
+	export default {
+		oncreate() {
+			console.log('oncreate - about.html')
+		},
+		methods: {
+			onClick() {
+				window.location.hash = '#modal'
+			}
+		}
+	}
+</script>

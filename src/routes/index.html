@@ -11,6 +11,8 @@
 
 <p><strong>Try editing this file (routes/index.html) to test hot module reloading.</strong></p>
 
+<button on:click="onClick()">Click here to open a "modal"</button>
+
 <style>
 	h1, figure, p {
 		text-align: center;
@@ -44,3 +46,15 @@
 		}
 	}
 </style>
+<script>
+	export default {
+		oncreate() {
+			console.log('oncreate - index.html')
+		},
+		methods: {
+			onClick() {
+				window.location.hash = '#modal'
+			}
+		}
+	}
+</script>
